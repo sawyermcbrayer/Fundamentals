@@ -9,11 +9,11 @@ def main():
         userVeggieInput = int(input("Invalid input, please enter 1 or 2..."))
     if (userVeggieInput == 1):
         onionReturn , conversion = vegetable.onion()
-        print("Your have cut through" , onionReturn , "inches of Onions!!! Wow!")
+        print("You have cut through" , onionReturn , "inches of Onions! Wow!")
         print("Thats like cutting through a" , conversion , "foot tall onion....woah")
     elif (userVeggieInput == 2):
         carrotReturn , conversion = vegetable.carrot()
-        print("Your have cut through" , carrotReturn , "inches of Carrots!!! Youre a maniac!")
-        print("Thats like cutting through a" , conversion , "foot tall carrot...jeepers")
+        print("Your have cut through" , carrotReturn , "inches of Carrots!")
+        print("Thats like cutting through a" , conversion , "foot tall carrot.")
 
 main()
