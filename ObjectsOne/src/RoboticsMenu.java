@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class RoboticsMenu {
@@ -39,15 +41,61 @@ public class RoboticsMenu {
             if(userMenu == 0){
                 exitValue = true;
             } else if(userMenu == 1){
+                //SPACE
+
+
+
+
+
+
                 ConsoleFlush.flush();
-                System.out.println("You entered: " + userMenu);
+                /*System.out.println("You entered: " + userMenu);
                 String[] orderReturn = RoboticsOrders.Orders();
                 for(int i =0; i < orderReturn.length; i ++){
                     System.out.print(orderReturn[i] + " ");
+                }*/
+
+                input.nextLine();
+                String userAcc;
+                ArrayList<RoboticsOrders> varRobots = new ArrayList<RoboticsOrders>();
+                List<String> accList = new ArrayList<>();
+
+                boolean quit = false;
+                while(!quit){
+                    quit = true;
                 }
+
+                boolean quit2 = false;
+                while(!quit2){
+                    RoboticsOrders.inventory();
+                    System.out.println("Enter robot accessories. Enter 0 to quit.");
+                    userAcc = input.nextLine();
+                    userAcc = userAcc.toUpperCase();
+
+                    if(userAcc.equals("ARM")){
+                        System.out.println("Arm selected!");
+                        accList.add(userAcc);
+                    } else if (userAcc.equals("LEG")){
+                        System.out.println("Leg selected!");
+                        accList.add(userAcc);
+                    }
+                    else if (userAcc.equals("0")){
+                        quit = true;
+                    }
+                }
+                RoboticsOrders r1 = new RoboticsOrders(accList);
+                System.out.println(r1);
+
+
                 System.out.println("\n");
                 System.out.println("Use keypad to enter desired menu selection.");
                 System.out.println("[1] Order\t[2] Revise\t[3]Checkout\t[0] ShutDown");
+
+
+
+
+
+                //SPACE
             } else if (userMenu == 2){
                 ConsoleFlush.flush();
                 System.out.println("You entered: " + userMenu);

@@ -1,19 +1,23 @@
-import java.util.Arrays;
+import java.util.List;
 
 public class RoboticsOrders {
     String robotType;
-    String robotAccessory;
-    RoboticsOrders(){
+    List<String> robotAccessory;
+
+    RoboticsOrders(List<String> acc1){
         robotType = "Generic";
-        robotAccessory = "Blank Robot";
+        robotAccessory = acc1;
+    }
+    static void inventory(){
+        System.out.println("Type: Modular, Single");
+        System.out.println("Accessories: Arm, Leg");
     }
 
-    public static String[] Orders(){
-        int numRobots = 0;
-        int numRobotParts = 0;
 
-        String[] myList = new String[5];
-        Arrays.fill(myList, "one");
-        return myList;
+
+    @Override
+    public String toString() {
+        return "Robot type: " + robotType + "\nAccessories added: " + robotAccessory;
     }
+
 }
